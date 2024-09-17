@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quran App</title>
+    <link rel="stylesheet" href="./src/sass/main.scss" />
+    <!-- <script type="module" src="./src/js/Controller.js"></script> -->
+
+    <!-- Normalize css -->
+    <link rel="stylesheet" href="./normalize.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="App">
+      <header>
+        <div class="buttons">
+          <!-- <a class="button-17" href="">قصص الانبياء</a> -->
+          <a class="button-17" id="haadith" href=""
+            >أحاديث
+            <span class="tooltiptext">بعض الأحاديث</span>
+          </a>
+          <a class="button-17" id="tafseer" href=""
+            >تفسير القرأن
+            <span class="tooltiptext"> التفسير</span>
+          </a>
+          <a class="button-17" id="listen" href=""
+            >الاستماع للقرأن
+            <span class="tooltiptext">ياسر الدوسري</span>
+          </a>
+        </div>
+        <form onsubmit="event.preventDefault();" role="search" dir="rtl">
+          <input
+            id="search"
+            type="search"
+            placeholder="ادخل : اسم ثنائي , لقب الشيخ , اسم مميز "
+            autofocus
+            required
+          />
+          <button id="search-btn" type="submit">بحث</button>
+        </form>
+        <div class="logo">
+          <p>Quran</p>
+          <!-- <i class="fa-solid fa-mosque"></i> -->
+        </div>
+      </header>
+      <div class="side-bar-search">
+        <div class="names">
+          <!-- <div class="bar">
+            <div class="sheikh">
+              <p>الشيخ ماهر المعيقلي</p>
+            </div>
+          </div> -->
+        </div>
+        <div class="pagination">
+          <!-- <button class="pag-btn-next">
+            <i class="fa-solid fa-arrow-left"></i>
+            <span>3</span>
+          </button>
+          <button class="pag-btn-back">
+            <span>2</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button> -->
+        </div>
+      </div>
+      <div class="container content-1">
+        <div class="parent"></div>
+       
+        <!-- todo start of Quran listening -->
+        <!-- <div class="sora">
+            <div class="icons">
+              <i class="fa-regular fa-bookmark"></i>
+              <i class="fa-solid fa-download"></i>
+              <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+
+            <div class="sora-name">
+              <p>001 الفاتحة</p>
+              <i class="fa-solid fa-circle-play"></i>
+            </div>
+          </div>  -->
+        <!-- todo end of Quran listening -->
+
+        <!--? Start of Hadith -->
+        <!-- <div class="content-1">
+        <div class="hadith-parent">
+          <div class="Hadith">
+            <div class="Hadith-item">
+              <p>حديث 1</p>
+            </div>
+          </div>
+          <div class="modal hidden">
+            <button class="close-modal">&times;</button>
+            <h1>حديث 1</h1>
+            <p>
+              حَدَّثَنَا الْحَسَنُ بْنُ عَلِيٍّ حَدَّثَنَا سُلَيْمَانُ بْنُ
+              حَرْبٍ حَدَّثَنَا حَمَّادٌ عَنْ هِشَامٍ عَنْ ابْنِ سِيرِينَ عَنْ
+              عَائِشَةَأَنَّ النَّبِيَّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ كَانَ
+              لَا يُصَلِّ فِي مَلَاحِفِنَاقَالَ حَمَّادٌ وَسَمِعْتُ سَعِيدَ بْنَ
+              أَبِي صَدَقَةَ قَالَ سَأَلْتُ مُحَمَّدًا عَنْهُ فَلَمْ
+              يُحَدِّثْنِي وَقَالَ سَمِعْتُهُ مُنْذُ زَمَانٍ وَلَا أَدْرِي
+              مِمَّنْ سَمِعْتُهُ وَلَا أَدْرِي أَسَمِعْتُهُ مِنْ ثَبْتٍ أَوْ لَا
+              فَسَلُوا عَنْهُ
+            </p>
+          </div>
+          <div class="overlay hidden"></div>
+        </div>
+        
+      </div> -->
+        <!--? End of Hadith -->
+
+        <!--* start of tafseer -->
+        <!-- <div class="tafseer-parent">
+          <div class="tafseer">
+            <div class="tafseer-item">
+              <i
+                class="fa-solid fa-circle-play fa-2xl"
+                style="color: #74c0fc"
+              ></i>
+              <p>سورة الاخلاص 112</p>
+            </div>
+          </div>
+          <div class="modal hidden">
+            <button class="close-modal">&times;</button>
+            <h1>سورة الاخلاص</h1>
+            <p>
+              قلۡ هُوَ ٱللَّهُ أَحَدٌ : قل -أيها الرسول-: هو الله المتفرد
+              بالألوهية والربوبية والأسماء والصفات، لا يشاركه أحد فيها
+            </p>
+            <p>
+              ٱللَّهُ ٱلصَّمَدُ : الله الذي كَمُل في صفات الشَّرَف والمجد
+              والعظمة، الذي يقصده الخلائق في قضاء الحوائج والرغائب.
+            </p>
+            <p>لمۡ يَلِدۡ وَلَمۡ يُولَدۡ : ليس له ولد ولا والد ولا صاحبة</p>
+            <p>
+              وَلَمۡ يَكُن لَّهُۥ كُفُوًا أَحَدُۢ : ولم يكن له مماثلا ولا
+              مشابهًا أحد من خلقه، لا في أسمائه ولا في صفاته، ولا في أفعاله،
+              تبارك وتعالى وتقدَّس.
+            </p>
+          </div>
+          <div class="overlay hidden"></div>
+        </div> -->
+        <!--* end of tafseer -->
+
+        <!--! Start of error -->
+        <!-- <div class="error">
+            <div>
+              <svg>
+                <use href="src/img/icons.svg#icon-alert-triangle"></use>
+              </svg>
+            </div>
+            <p>No recipes found for your query. Please try again!</p>
+          </div> -->
+        <!--! end of error -->
+
+        <!--! start of message -->
+        <!-- 
+          <div class="message">
+          <div>
+            <svg>
+              <use href="/icons.21bad73c.svg#icon-smile"></use>
+            </svg>
+          </div>
+          <p>Start by searching for a recipe or an ingredient. Have fun!</p>
+        </div>
+          -->
+        <!--! end of message -->
+      </div>
+      <footer>© Copyright by Abdelrhman Hisham.</footer>
+    </div>
+    <script type="module" src="./src/js/Controller.js"></script>
+  </body>
+</html>
